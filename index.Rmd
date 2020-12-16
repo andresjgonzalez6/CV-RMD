@@ -55,7 +55,7 @@ Aside
 if(PDF_EXPORT){
   cat("View this CV online with links at _nickstrayer.me/cv_")
 } else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/nstrayer/cv/raw/master/strayer_cv.pdf)")
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/andresjgonzalez6/CV-RMD/raw/master/gonzalez1_cv.pdf)")
 }
 ```
 
