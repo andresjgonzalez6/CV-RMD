@@ -1,0 +1,147 @@
+---
+title: Andres Gonzalez's Resume"
+author: Andres Gonzalez
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    css: ['css/custom_resume.css', 'css/styles.css', 'resume']
+    # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: true
+---
+
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+library(tidyverse)
+library(glue)
+
+# Set this to true to have links turned into footnotes at the end of the document
+PDF_EXPORT <- FALSE
+
+# Holds all the links that were inserted for placement at the end
+links <- c()
+
+source('parsing_functions.R')
+
+
+# First let's get the data, filtering to only the items tagged as
+# Resume items
+position_data <- read_csv('positions.csv') %>% 
+  filter(in_resume) %>% 
+  mutate(
+    # Build some custom sections by collapsing others
+    section = case_when(
+      section %in% c('research_positions', 'industry_positions') ~ 'positions', 
+      section %in% c('data_science_writings', 'by_me_press') ~ 'writings',
+      TRUE ~ section
+    )
+  ) 
+
+```
+
+
+Aside
+================================================================================
+
+
+![logo](beta_dist.png){width=100%}
+
+Contact {#contact}
+--------------------------------------------------------------------------------
+
+
+
+- <i class="fa fa-envelope"></i> andres.gonzalez@centralaz.edu
+- <i class="fa fa-envelope"></i> ajcapanzana@gmail.com
+- <i class="fa fa-envelope"></i> andresjgonzalez6@gmail.com
+- <i class="fa fa-linkedin"></i> https://www.linkedin.com/in/andres-gonzalez-943257113/
+- <i class="fa fa-github"></i> https://github.com/andresjgonzalez6
+- <i class="fa fa-phone"></i> (480) 734-3063
+
+
+
+Language Skills {#skills}
+--------------------------------------------------------------------------------
+
+
+```{r}
+skills <- tribble(
+  ~skill,               ~level,
+  "R",                  5,
+  "Javascript",         4.5,
+  "SQL",                4.5,
+  "Python",             3.5,
+  "AWS API",            3.5,
+  "Automation Anywhere",3,
+  "PHP",                3
+)
+build_skill_bars(skills)
+```
+
+
+
+Personal Portfolio {#more-info}
+--------------------------------------------------------------------------------
+
+- <i class="fa fa-envelope"></i> https://andresjgonzalez6.github.io/PersonalPortfolio/
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+Made w/ [**pagedown**](https://github.com/rstudio/pagedown). 
+
+Source code: [github.com/nstrayer/cv](https://github.com/nstrayer/cv).
+
+Last updated on `r Sys.Date()`.
+
+
+
+
+Main
+================================================================================
+
+Andres Gonzalez {#title}
+--------------------------------------------------------------------------------
+
+```{r}
+intro_text <- "
+  
+Consistently improving my technology skillset: starting with GIS, moving to web development, now I am combining data analytics with robotic process automation and AWS cloud. 
+
+I architected infrastructure for a startup company, The Valor Solution, to bring automation technologies to the medical billing industry. I also enjoy being full-time faculty, at Central Arizona College, where I teach computer science to students and write new curriculum. 
+
+Searching for a position that incorporates cloud solutions with data science. It would be a plus if the data is about sustainability, geography, environmental, urban, or other earth systems. I completed the AWS Cloud Practitioner Certification, and currently working on additional AWS Certifications. 
+
+"
+
+
+cat(sanitize_links(intro_text))
+```
+
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+position_data %>% print_section('education')
+```
+
+
+
+Experiences {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+```{r}
+position_data %>% print_section('positions')
+```
+
+::: aside
+
+My sustainability training taught me that 'future innovations' were necessary to solve climate change and other global issues. Mastering data science and cloud computing will be instrumental toward those future innovations.  
+
+:::

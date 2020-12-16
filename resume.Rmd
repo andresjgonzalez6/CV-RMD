@@ -144,11 +144,15 @@ position_data %>% print_section('education')
 
 
 
-Selected Positions {data-icon=suitcase}
+Experiences {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
 ```{r}
 position_data %>% print_section('positions')
 ```
 
+::: aside
 
+My sustainability training taught me that 'future innovations' were necessary to solve climate change and other global issues. Mastering data science is a step toward those future innovations.  
+
+:::
