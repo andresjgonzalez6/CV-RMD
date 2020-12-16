@@ -117,9 +117,9 @@ Andres Gonzalez {#title}
 intro_text <- "
 Consistently improving my technology skillset: starting with GIS, moving to web development, now I am combining data analytics with robotic process automation. 
 
-I am currently building a medical technology startup company, The Valor Solution, to bring automation technologies to the medical billing industry. I also enjoy being full-time faculty at Central Arizona College, where I teach computer science to students and write new curriculum. 
+I architected  infrastructure for a startup company, The Valor Solution, to bring automation technologies to the medical billing industry. I also enjoy being full-time faculty at Central Arizona College, where I teach computer science to students and write new curriculum. 
 
-Searching for a position that incorporates cloud solutions with data science. It would be a plus if the data is about sustainability, environmental, urban, or other earth systems. 
+Searching for a position that incorporates cloud solutions with data science. It would be a plus if the data is about sustainability, geography, environmental, urban, or other earth systems. 
 
 
 "
