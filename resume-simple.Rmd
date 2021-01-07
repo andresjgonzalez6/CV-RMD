@@ -54,12 +54,17 @@ Contact {#contact}
 
 
 
-- <i class="fa fa-envelope"></i> andres.gonzalez@centralaz.edu
 - <i class="fa fa-envelope"></i> ajcapanzana@gmail.com
-- <i class="fa fa-envelope"></i> andresjgonzalez6@gmail.com
-- <i class="fa fa-linkedin"></i> https://www.linkedin.com/in/andres-gonzalez-943257113/
-- <i class="fa fa-github"></i> https://github.com/andresjgonzalez6
+- <i class="fa fa-linkedin"></i> www.linkedin.com/in/andres-gonzalez-technology
+- <i class="fa fa-github"></i> github.com/andresjgonzalez6
 - <i class="fa fa-phone"></i> (480) 734-3063
+
+
+Personal Portfolio {#more-info}
+--------------------------------------------------------------------------------
+
+- <i class="fa fa-envelope"></i> andresjgonzalez6.github.io/
+PersonalPortfolio/
 
 
 
@@ -83,20 +88,14 @@ build_skill_bars(skills)
 
 
 
-Personal Portfolio {#more-info}
---------------------------------------------------------------------------------
-
-- <i class="fa fa-envelope"></i> https://andresjgonzalez6.github.io/PersonalPortfolio/
-
-
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
+Resume written in R language, knitted into HTML, then saved as PDF. 
 
-Made w/ [**pagedown**](https://github.com/rstudio/pagedown). 
-
-Source code: [github.com/nstrayer/cv](https://github.com/nstrayer/cv).
+Link to my source code : [github.com/andresjgonzalez6/CV-RMD](github.com/andresjgonzalez6/CV-RMD)
 
 Last updated on `r Sys.Date()`.
+
 
 
 
@@ -110,11 +109,7 @@ Andres Gonzalez {#title}
 ```{r}
 intro_text <- "
   
-Consistently improving my technology skillset: starting with GIS, moving to web development, now I am combining data analytics with robotic process automation and AWS cloud. 
-
-I architected infrastructure for a startup company, The Valor Solution, to bring automation technologies to the medical billing industry. I also enjoy being full-time faculty, at Central Arizona College, where I teach computer science to students and write new curriculum. 
-
-Searching for a position that incorporates cloud solutions with data science. It would be a plus if the data is about sustainability, geography, environmental, urban, or other earth systems. I completed the AWS Cloud Practitioner Certification, and currently working on additional AWS Certifications. 
+Driven technology expert with 5+ years of software experience. Seeking a full-time cloud architect or data analytics position utilizing software development, data processing, automation, and collaboration skills. Believes future innovations from computer science will solve today's challenges. 
 
 "
 
@@ -133,6 +128,15 @@ position_data %>% print_section('education')
 
 
 
+Certifications {data-icon=laptop data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+position_data %>% print_section('certifications')
+```
+
+
+
 Experiences {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
@@ -140,8 +144,24 @@ Experiences {data-icon=suitcase}
 position_data %>% print_section('positions')
 ```
 
+
+
+
+
+
 ::: aside
 
-My sustainability training taught me that 'future innovations' were necessary to solve climate change and other global issues. Mastering data science and cloud computing will be instrumental toward those future innovations.  
+
+
 
 :::
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+Made w/ [**pagedown**](https://github.com/rstudio/pagedown). 
+
+Source code: [github.com/nstrayer/cv](https://github.com/nstrayer/cv).
+
+
